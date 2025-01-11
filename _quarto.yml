@@ -7,9 +7,18 @@ website:
     style: "docked"
     search: true
     contents:
-      - text: "Quarto"
-        href: "00.00.cover.ipynb"
+      - "00.00.cover.ipynb"
+      - section: "01.00.chapter01.ipynb"
+        contents:
+          - "01.01.install.ipynb"
+          - "01.02.trial.ipynb"
+      - section: "02.00.chapter02.ipynb"
+        contents:
+          - "02.01.markdown.ipynb"
+          - "02.02.figure.ipynb"
+          - "02.03.table.ipynb"
 
 format:
   html:
     toc: true
+    code-block-bg: true
