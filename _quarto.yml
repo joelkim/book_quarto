@@ -1,0 +1,15 @@
+project:
+  type: website
+
+website:
+  title: "Quarto"
+  sidebar:
+    style: "docked"
+    search: true
+    contents:
+      - text: "Quarto"
+        href: "00.00.cover.ipynb"
+
+format:
+  html:
+    toc: true
