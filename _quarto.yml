@@ -7,18 +7,10 @@ website:
     style: "docked"
     search: true
     contents:
-      - "00.00.cover.ipynb"
-      - section: "01.00.chapter01.ipynb"
-        contents:
-          - "01.01.install.ipynb"
-          - "01.02.trial.ipynb"
-      - section: "02.00.chapter02.ipynb"
-        contents:
-          - "02.01.markdown.ipynb"
-          - "02.02.figure.ipynb"
-          - "02.03.table.ipynb"
+      - auto: "*.ipynb"
 
 format:
   html:
     toc: true
+    css: styles.css
     code-block-bg: true

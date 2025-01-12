@@ -1,0 +1,10 @@
+div.markdown-render {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  background-color: rgba(233, 236, 239, 0.65);
+  padding: 0em 1em 1em 1em;
+}
+
+div.markdown-render section.level1 {
+  margin-top: -0.3em;
+}
