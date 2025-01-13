@@ -2,9 +2,22 @@ div.markdown-render {
   border-top: 1px solid black;
   border-bottom: 1px solid black;
   background-color: rgba(233, 236, 239, 0.65);
-  padding: 0em 1em 1em 1em;
+  padding-left: 1em;
 }
 
-div.markdown-render section.level1 {
-  margin-top: -0.3em;
+div.markdown-render-header {
+  background-color: rgba(219, 219, 219, 0.8);
+  padding: 0.2em 0em 0.2em 0.7em;
+  margin-bottom: -1em;
+  margin-left: -1em;
+  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 0.875em;
+}
+
+div.markdown-render-header p {
+  margin: 0;
+}
+
+div.markdown-render-container {
+  margin: 0em 1em 0em 1em;
 }
