@@ -1,0 +1,5 @@
+기본 하이퍼링크: <https://quarto.org>
+
+실제링크와 표기가 다른 하이퍼링크: [Quarto](https://quarto.org)
+
+새 탭에서 열리는 하이퍼링크: [Quarto](https://quarto.org){target="_blank" style="color: red;"}
