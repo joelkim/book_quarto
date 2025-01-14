@@ -1,5 +1,9 @@
 project:
   type: website
+  render:
+    - "*.ipynb"
+    - "!mdsample.qmd"
+    - "!samples/"
 
 website:
   title: "Quarto"

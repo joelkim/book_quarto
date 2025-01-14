@@ -1,0 +1,16 @@
+::: {layout-ncol={{ ncol }}}
+
+```{.markdown filename="{{ filename }} 코드"}
+{{ &code }}
+```
+
+::: {.markdown-render}
+:::: {.markdown-render-header}
+{{ filename }} 변환결과
+::::
+:::: {.markdown-render-container}
+{{ &code }}
+::::
+:::
+
+:::
