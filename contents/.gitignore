@@ -174,3 +174,5 @@ cython_debug/
 _site/
 site_libs/
 figs/
+*_files/
+_extensions/
