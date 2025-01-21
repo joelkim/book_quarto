@@ -19,3 +19,4 @@ format:
     toc: true
     css: styles.css
     code-block-bg: true
+    monofont: D2Coding
