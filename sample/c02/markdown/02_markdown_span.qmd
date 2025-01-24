@@ -1,0 +1,1 @@
+본문 중에 [대괄호]{#span1 style="color:red;"}를 사용하면 HTML 스팬(span) [요소]{#span2 style="font-weight:bold; color:blue;"}가 된다.

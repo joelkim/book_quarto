@@ -1,0 +1,8 @@
+:::: {style="background-color:orange; padding:1em;"}
+바깥쪽 DIV 내용입니다.
+
+::::: {style="background-color:red"}
+안쪽 DIV 내용입니다.
+:::::
+
+::::

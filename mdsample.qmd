@@ -6,7 +6,7 @@
 
 ::: {.markdown-render}
 :::: {.markdown-render-header}
-{{ filename }} 변환결과
+{{ filename }} 결과
 ::::
 :::: {.markdown-render-container}
 {{ &code }}

@@ -1,0 +1,9 @@
+콜론 3개(`:::`)를 사용하면 HTML DIV 요소를 정의할 수 있다.
+
+
+::: {.border style="background-color:orange; padding:1em;"}
+여기가 DIV 요소의 내용이다.
+:::
+
+
+앞부분 콜론 뒤에 중괄호를 사용하여 DIV 요소의 속성을 정의할 수 있다.

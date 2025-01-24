@@ -19,4 +19,8 @@ format:
     toc: true
     css: styles.css
     code-block-bg: true
+    code-overflow: wrap
+    code-line-numbers: true
     monofont: D2Coding
+    language:
+      crossref-tbl-title: "표"

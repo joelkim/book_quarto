@@ -24,20 +24,33 @@
     url('D2CodingBold.svg') format('svg');
 }
 
+div.code-with-filename {
+  max-width: 100%;
+}
+
+div.code-with-filename div.sourceCode pre.sourceCode code.sourceCode {
+  padding-left: 0.9em;
+}
+
 div.code-with-filename div.sourceCode pre.sourceCode code.sourceCode span {
   font-family: 'D2 coding';
 }
 
+div.code-with-filename div.sourceCode pre.sourceCode code.sourceCode span a {
+  color: green;
+  font-weight: bold;
+}
+
 div.markdown-render {
-  background-color: rgba(233, 236, 239, 0.65);
   padding-left: 1em;
+  border: solid 2px black;
 }
 
 div.markdown-render-header {
   background-color: rgba(219, 219, 219, 0.8);
   padding: 0.2em 0em 0.2em 0.7em;
   margin-bottom: 1em;
-  margin-left: -1em;
+  margin-left: -1.15em;
   font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   font-size: 0.875em;
 }
