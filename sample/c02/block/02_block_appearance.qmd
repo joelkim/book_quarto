@@ -1,0 +1,11 @@
+::: {.callout-note appearance="default"}
+디폴트 스타일 콜아웃
+:::
+
+::: {.callout-note appearance="simple"}
+simple 스타일 콜아웃
+:::
+
+::: {.callout-note appearance="minimal"}
+minimal 스타일 콜아웃
+:::

@@ -1,0 +1,19 @@
+::: {.callout-note}
+note 콜아웃
+:::
+
+::: {.callout-warning}
+warning 콜아웃
+:::
+
+::: {.callout-important}
+important 콜아웃
+:::
+
+::: {.callout-tip}
+tip 콜아웃
+:::
+
+::: {.callout-caution}
+caution 콜아웃
+:::
