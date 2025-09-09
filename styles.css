@@ -1,0 +1,64 @@
+@font-face {
+  font-family: 'D2 coding';
+  font-style: normal;
+  font-weight: 400;
+  src: url('D2Coding.eot');
+  src: local('※'), local('D2Coding'),
+    url('D2Coding.eot?#iefix') format('embedded-opentype'),
+    url('D2Coding.woff2') format('x-woff2'),
+    url('D2Coding.woff') format('woff'),
+    url('D2Coding.ttf') format('truetype'),
+    url('D2Coding.svg') format('svg');
+}
+
+@font-face {
+  font-family: 'D2 coding';
+  font-style: normal;
+  font-weight: 700;
+  src: url('D2CodingBold.eot');
+  src: local('※'), local('D2Coding Bold'),
+    url('D2CodingBold.eot?#iefix') format('embedded-opentype'),
+    url('D2CodingBold.woff2') format('x-woff2'),
+    url('D2CodingBold.woff') format('woff'),
+    url('D2CodingBold.ttf') format('truetype'),
+    url('D2CodingBold.svg') format('svg');
+}
+
+div.code-with-filename {
+  max-width: 100%;
+}
+
+div.code-with-filename div.sourceCode pre.sourceCode code.sourceCode {
+  padding-left: 0.9em;
+}
+
+div.code-with-filename div.sourceCode pre.sourceCode code.sourceCode span {
+  font-family: 'D2 coding';
+}
+
+div.code-with-filename div.sourceCode pre.sourceCode code.sourceCode span a {
+  color: green;
+  font-weight: bold;
+}
+
+div.markdown-render {
+  padding-left: 1em;
+  border: solid 2px black;
+}
+
+div.markdown-render-header {
+  background-color: rgba(219, 219, 219, 0.8);
+  padding: 0.2em 0em 0.2em 0.7em;
+  margin-bottom: 1em;
+  margin-left: -1.15em;
+  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 0.875em;
+}
+
+div.markdown-render-header p {
+  margin: 0;
+}
+
+div.markdown-render-container {
+  margin: 0em 1em 0em 1em;
+}

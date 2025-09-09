@@ -1,0 +1,402 @@
+[
+  {
+    "objectID": "02.02.table.html",
+    "href": "02.02.table.html",
+    "title": "표",
+    "section": "",
+    "text": "콰르토 마크다운으로 표를 만드는 방법은 여러가지가 있으나 여기에서는 가장 많이 사용되는 파이프(pipe) 방식을 설명한다. 파이프 방식은 표의 열을 구분하는데 파이프 기호(|)를 사용해서 붙여진 이름이다.",
+    "crumbs": [
+      "표"
+    ]
+  },
+  {
+    "objectID": "02.02.table.html#표-제작-기본",
+    "href": "02.02.table.html#표-제작-기본",
+    "title": "표",
+    "section": "표 제작 기본",
+    "text": "표 제작 기본\n파이프 방식으로 표를 만드는 기본적인 방법은 다음과 같다.\n\n세로선\n\n파이프 기호(|)로 표의 세로선을 표시한다.\n좌우의 가장자리 세로선은 생략해도 된다.\n파이프 기호에 인접한 공백과 각 줄 가장자리의 공백은 무시된다.\n파이프 기호의 세로 정렬 위치는 상관없다.\n\n구분행\n\n제목행과 본문행의 구분행에는 빼기 기호(-)를 사용한다\n빼기 기호는 하나 이상 있어야 한다.\n\n좌우정렬\n\n구분행의 빼기 기호의 좌우에 콜론 기호(:)를 붙여 해당 열의 좌우 정렬을 지정할 수 있다.\n콜론 기호가 왼쪽에 붙으면 왼쪽 정렬, 오른쪽이면 오른쪽 정렬, 양쪽에 붙으면 중앙정렬이다.\n콜론 기호가 없으면 디폴트로 왼쪽 정렬이다.\n\n제목\n\n마지막에 콜론 기호로 시작하는 행을 붙여서 제목을 표시할 수 있다.\n제목행은 표와 여러 줄 떨어져도 상관없다.\n\n\n\n\n\n\n\nsample/c02/table/02_table_basic1.qmd 코드\n\n|  왼쪽 정렬  | 오른쪽 정렬 |  중앙정렬  |  디폴트   |\n|:------------|------------:|:----------:|-----------|\n|          12 |          12 |         12 |        12 |\n|         123 |         123 |        123 |       123 |\n|           1 |           1 |          1 |         1 |\n: 파이프 방식 표\n\n\n\n\n\n\nsample/c02/table/02_table_basic1.qmd 결과\n\n\n\n파이프 방식 표\n\n\n왼쪽 정렬\n오른쪽 정렬\n중앙정렬\n디폴트\n\n\n\n\n12\n12\n12\n12\n\n\n123\n123\n123\n123\n\n\n1\n1\n1\n1\n\n\n\n\n\n\n\n세로줄의 위치나 가장자리 공백 등은 영향을 미치지 않는다. 아래의 예제는 위의 예제와 동일하지만 일부러 보기 흉하게 정렬을 하지 않았다. 표 결과가 동일함을 알 수 있다.\n\n\n\n\n\nsample/c02/table/02_table_basic2.qmd 코드\n\n  |왼쪽 정렬 |오른쪽 정렬| 중앙정렬 | 디폴트 |\n|   :------------  | ------------:|:----------:    |-----------|\n  | 12|12 |12| 12 |\n | 123 | 123| 123 |123|\n       | 1 |1|1 | 1 |\n\n\n: 파이프 방식 표\n\n\n\n\n\n\nsample/c02/table/02_table_basic2.qmd 결과\n\n\n\n파이프 방식 표\n\n\n왼쪽 정렬\n오른쪽 정렬\n중앙정렬\n디폴트\n\n\n\n\n12\n12\n12\n12\n\n\n123\n123\n123\n123\n\n\n1\n1\n1\n1",
+    "crumbs": [
+      "표"
+    ]
+  },
+  {
+    "objectID": "02.02.table.html#제목행",
+    "href": "02.02.table.html#제목행",
+    "title": "표",
+    "section": "제목행",
+    "text": "제목행\n제목행에 내용을 넣지 않으면 제목행 자체가 없어진다.\n\n\n\n\n\nsample/c02/table/02_table_basic3.qmd 코드\n\n| | | | |\n|-|-|-|-|\n|1|1|1|1|\n|2|2|2|2|\n|3|3|3|3|\n\n: 제목행이 없는 경우\n\n\n\n\n\n\nsample/c02/table/02_table_basic3.qmd 결과\n\n\n\n제목행이 없는 경우\n\n\n1\n1\n1\n1\n\n\n2\n2\n2\n2\n\n\n3\n3\n3\n3",
+    "crumbs": [
+      "표"
+    ]
+  },
+  {
+    "objectID": "02.02.table.html#스타일",
+    "href": "02.02.table.html#스타일",
+    "title": "표",
+    "section": "스타일",
+    "text": "스타일\n제목 문자열 뒤에 중괄호를 사용하여 다음과 같은 부트스트랩(Bootstrap) 스타일을 지정할 수 있다. 다음은 전체 부트스트랩 스타일의 일부이다.\n\nstriped\nhover\nactive\nbordered\nborderless\nsm\n\n\n\n\n\n\nsample/c02/table/02_table_style.qmd 코드\n\n|c1|c2|c3|c4|c5|\n|--|--|--|--|--|\n|00|01|02|03|04|\n|05|06|07|08|09|\n|10|11|12|13|14|\n|15|16|17|18|19|\n\n: 부트스트랩 스타일 적용 {.sm .bordered .striped}\n\n\n\n\n\n\nsample/c02/table/02_table_style.qmd 결과\n\n\n\n부트스트랩 스타일 적용\n\n\nc1\nc2\nc3\nc4\nc5\n\n\n\n\n00\n01\n02\n03\n04\n\n\n05\n06\n07\n08\n09\n\n\n10\n11\n12\n13\n14\n\n\n15\n16\n17\n18\n19",
+    "crumbs": [
+      "표"
+    ]
+  },
+  {
+    "objectID": "02.02.table.html#폭-조정",
+    "href": "02.02.table.html#폭-조정",
+    "title": "표",
+    "section": "폭 조정",
+    "text": "폭 조정\n제목 문자열 뒤의 중괄호에 tbl-colwidths 속성값으로 각 열의 폭을 조정할 수 있다. 숫자는 각 열의 상대적인 크기를 나타낸다. 이 숫자는 목표치일 뿐이며 표 내부의 문자열 크기, 마진, 패딩 등 여러가지 요소로 인해 정확한 비율을 가지지 못할 수 있다.\n\n\n\n\n\nsample/c02/table/02_table_width.qmd 코드\n\n| A | B | C |\n|:-:|:-:|:-:|\n| 1 | 2 | 3 |\n| 4 | 5 | 6 |\n| 7 | 8 | 9 |\n\n: 열 폭 조정 {tbl-colwidths=\"[1,2,4]\" .sm .bordered}\n\n\n\n\n\n\nsample/c02/table/02_table_width.qmd 결과\n\n\n\n열 폭 조정 {tbl-colwidths='[1,2,4]'}\n\n\nA\nB\nC\n\n\n\n\n1\n2\n3\n\n\n4\n5\n6\n\n\n7\n8\n9",
+    "crumbs": [
+      "표"
+    ]
+  },
+  {
+    "objectID": "02.02.table.html#아이디와-라벨",
+    "href": "02.02.table.html#아이디와-라벨",
+    "title": "표",
+    "section": "아이디와 라벨",
+    "text": "아이디와 라벨\n표 제목에 {#tbl-아이디문자열}과 같은 형식으로 표에 아이디를 붙이고 다른 위치에서 [@tbl-아이디문자열] 형식으로 해당 표를 참조할 수 있다.\n\n\n\n\n\nsample/c02/table/02_table_ref.qmd 코드\n\n| A | B | C |\n|:-:|:-:|:-:|\n| 1 | 2 | 3 |\n| 4 | 5 | 6 |\n| 7 | 8 | 9 |\n\n: 아이디가 있는 표 {#tbl-1}\n\n자세한 내용은 [@tbl-1]을 참조한다.\n\n\n\n\n\n\nsample/c02/table/02_table_ref.qmd 결과\n\n\n\n\n\n표 1: 아이디가 있는 표\n\n\n\n\n\nA\nB\nC\n\n\n\n\n1\n2\n3\n\n\n4\n5\n6\n\n\n7\n8\n9\n\n\n\n\n\n\n자세한 내용은 [@tbl-1]을 참조한다.",
+    "crumbs": [
+      "표"
+    ]
+  },
+  {
+    "objectID": "02.00.chapter02.html",
+    "href": "02.00.chapter02.html",
+    "title": "2장 콰르토 마크다운",
+    "section": "",
+    "text": "이 장에서는 콰트로 마크다운 형식을 소개한다.",
+    "crumbs": [
+      "2장 콰르토 마크다운"
+    ]
+  },
+  {
+    "objectID": "02.00.chapter02.html#학습-목표",
+    "href": "02.00.chapter02.html#학습-목표",
+    "title": "2장 콰르토 마크다운",
+    "section": "학습 목표",
+    "text": "학습 목표\n\n콰트로 마크다운의 기본문법을 익힌다.",
+    "crumbs": [
+      "2장 콰르토 마크다운"
+    ]
+  },
+  {
+    "objectID": "01.02.install.html",
+    "href": "01.02.install.html",
+    "title": "콰르토 설치",
+    "section": "",
+    "text": "콰르토 설치 프로그램은 다음 웹사이트에서 다운로드 받을 수 있다.\n\nhttps://quarto.org/docs/get-started/",
+    "crumbs": [
+      "콰르토 설치"
+    ]
+  },
+  {
+    "objectID": "01.02.install.html#설치-프로그램-다운로드",
+    "href": "01.02.install.html#설치-프로그램-다운로드",
+    "title": "콰르토 설치",
+    "section": "",
+    "text": "콰르토 설치 프로그램은 다음 웹사이트에서 다운로드 받을 수 있다.\n\nhttps://quarto.org/docs/get-started/",
+    "crumbs": [
+      "콰르토 설치"
+    ]
+  },
+  {
+    "objectID": "01.02.install.html#확장-프로그램",
+    "href": "01.02.install.html#확장-프로그램",
+    "title": "콰르토 설치",
+    "section": "확장 프로그램",
+    "text": "확장 프로그램\n콰르토의 입력 정보인 콰르토 마크다운 파일은 텍스트 파일이므로 텍스트 편집을 위한 프로그램이 필요하다.\n콰르토는 파이썬이나 R 코드를 삽입하고 실행하는데 최적화되어 있으므로 텍스트 에디터 대신 프로그램 작성에 사용되는 VS Code, JupyterLab, RStudio 등의 통합개발환경을 사용할 수도 있다. 이러한 통합개발환경의 경우 콰르토 마크다운 파일 편집을 위한 확장 기능을 제공한다.",
+    "crumbs": [
+      "콰르토 설치"
+    ]
+  },
+  {
+    "objectID": "01.00.chapter01.html",
+    "href": "01.00.chapter01.html",
+    "title": "1장 콰르토의 소개",
+    "section": "",
+    "text": "이 장에서는 콰트로 프로그램을 설치하고 기본적인 기능을 소개한다.",
+    "crumbs": [
+      "1장 콰르토의 소개"
+    ]
+  },
+  {
+    "objectID": "01.00.chapter01.html#학습-목표",
+    "href": "01.00.chapter01.html#학습-목표",
+    "title": "1장 콰르토의 소개",
+    "section": "학습 목표",
+    "text": "학습 목표\n\n콰트로 프로그램의 기능을 소개한다.\n콰트로를 설치한다.\n명령줄에서 콰트로 프로그램을 사용하는 방법을 익힌다.\nVS Code 프로그램에서 콰트로 확장 기능을 사용하는 방법을 익힌다.",
+    "crumbs": [
+      "1장 콰르토의 소개"
+    ]
+  },
+  {
+    "objectID": "01.01.intro.html",
+    "href": "01.01.intro.html",
+    "title": "콰르토 소개",
+    "section": "",
+    "text": "콰르토(quarto)는 .qmd 확장자를 가지는 ‘콰르토 마크다운 파일’ 또는 .ipynb 확장자를 가지는 ’주피터 노트북 파일’을 html 파일이나 pdf, MS워드, MS파워포인트 등 다양한 형식의 문서 파일로 변환하는 문서 변환 프로그램이다.",
+    "crumbs": [
+      "콰르토 소개"
+    ]
+  },
+  {
+    "objectID": "01.01.intro.html#문서형식-변환",
+    "href": "01.01.intro.html#문서형식-변환",
+    "title": "콰르토 소개",
+    "section": "",
+    "text": "콰르토(quarto)는 .qmd 확장자를 가지는 ‘콰르토 마크다운 파일’ 또는 .ipynb 확장자를 가지는 ’주피터 노트북 파일’을 html 파일이나 pdf, MS워드, MS파워포인트 등 다양한 형식의 문서 파일로 변환하는 문서 변환 프로그램이다.",
+    "crumbs": [
+      "콰르토 소개"
+    ]
+  },
+  {
+    "objectID": "01.01.intro.html#정적-웹-사이트-생성기",
+    "href": "01.01.intro.html#정적-웹-사이트-생성기",
+    "title": "콰르토 소개",
+    "section": "정적 웹 사이트 생성기",
+    "text": "정적 웹 사이트 생성기\n콰르토는 HTML 파일도 생성할 수 있으므로 동적인 웹 애플리케이션이 아니라 순수 HTML 파일로 구성된 정적 웹사이트(static website)를 생성하는 도구로 많이 사용된다. 단순히 마크다운 파일을 웹사이트로 만드는 일반적인 정적 웹사이트 생성기는 콰르토 이외에도 다음과 같은 여러가지 프로그램이 존재한다.\n\n지킬(Jekyll)\n휴고(Hugo)\n도큐사우르스(Docusaurus)\n\n이러한 이러한 정적 웹사이트 생성기와 비교하여 콰르토가 가지는 장점은 입력 파일에 포함된 파이썬 또는 R 등의 프로그램 코드를 실행하고 실행 결과를 출력문서에 원하는 방식으로 포함할 수 있다는 점이다. 따라서 소프트웨어 사용이나 개발과 관련된 문서를 제작하는데 많이 사용된다.",
+    "crumbs": [
+      "콰르토 소개"
+    ]
+  },
+  {
+    "objectID": "01.03.cli.html",
+    "href": "01.03.cli.html",
+    "title": "콰르토 사용법",
+    "section": "",
+    "text": "콰르토는 별도의 실행화면을 가진 애플리케이션이 아니라 터미널 또는 명령어 창에서 실행하는 명령어(command line) 프로그램이다.\n콰르토 명령은 quarto 키워드 + 명령 + 인수 + 옵션 형식으로 구성된다.\n자주 사용하는 콰르토 명령어들은 다음과 같다.\n\nrender: 파일 변환\npreview: 파일 변환후 브라우저에서 미리보기\nhelp: 도움말 보기\n\n예를 들어 sample.qmd 파일을 sample.html 파일로 변환하려면 다음 명령을 실행하면 된다.\nquarto render sample.qmd --to html \n위 명령에서 quarto는 콰르토 프로그램을 실행하는 키워드이고 render는 변환을 실행하라는 명령, sample.qmd는 변환 대상이 되는 파일을 지정하는 인수, --to html는 HTML 형식으로 변환하라는 옵션이다.\nrender 명령 대신 preview 명령을 사용하면 변환한 후에 웹브라우저를 실행시키고 해당 문서를 웹브라우저에서 보여준다.\nquarto preview sample.qmd --to html",
+    "crumbs": [
+      "콰르토 사용법"
+    ]
+  },
+  {
+    "objectID": "02.01.markdown.html",
+    "href": "02.01.markdown.html",
+    "title": "마크다운 기본",
+    "section": "",
+    "text": "콰르토의 마크다운 문법은 존 그루브(John Grube)의 오리지날 마크다운이 아니라 판독(Pandoc) 마크다운 문법을 사용한다. 판독 마크다운은 확장 프로그램을 사용자가 만들어 기능을 추가할 수 있으므로 훨씬 더 다양한 기능을 지원한다는 장점이 있다. 다만 일반적으로 사용되는 마크다운과는 일부 문법이 다르므로 사용에 주의가 필요하다.",
+    "crumbs": [
+      "마크다운 기본"
+    ]
+  },
+  {
+    "objectID": "02.01.markdown.html#글자-강조",
+    "href": "02.01.markdown.html#글자-강조",
+    "title": "마크다운 기본",
+    "section": "글자 강조",
+    "text": "글자 강조\n글자를 강조할 때는 단어의 앞과 뒤에 별 기호(*) 또는 밑줄 기호(_)를 붙인다. 기호의 개수에 따라 강조 스타일이 달라진다.\n별 기호 자체를 표시해야 할 경우에는 앞에 백슬래시를 사용한다.\n\n\n\n\n\nsample/c02/markdown/02_markdown_text.qmd 코드\n\n보통 글자\n\n*이탤릭체 글자*  _이탤릭체 글자_\n\n**볼드체 글자** __볼드체 글자__\n\n***이탤릭 + 볼드*** ___이탤릭 + 볼드___\n\n*단어*의 **중간**에 ***기호***가 있어도 가능\n\n\\*별표\\* 자체를 \\*\\*표시\\*\\*할 수 있다.\n\n\n\n\n\n\nsample/c02/markdown/02_markdown_text.qmd 결과\n\n\n보통 글자\n이탤릭체 글자 이탤릭체 글자\n볼드체 글자 볼드체 글자\n이탤릭 + 볼드 이탤릭 + 볼드\n단어의 중간에 기호가 있어도 가능\n*별표* 자체를 **표시**할 수 있다.",
+    "crumbs": [
+      "마크다운 기본"
+    ]
+  },
+  {
+    "objectID": "02.01.markdown.html#첨자",
+    "href": "02.01.markdown.html#첨자",
+    "title": "마크다운 기본",
+    "section": "첨자",
+    "text": "첨자\n윗첨자와 아랫첨자는 각각 ^ 기호와 ~ 기호로 둘러싼다. ^ 기호나 ~ 기호 사이의 첨자는 기본적으로 공백이 없어야 한다. 공백이 필요한 경우에는 공백 앞에 백슬래시 기호 \\를 붙여야 한다.\n\n\n\n\n\nsample/c02/markdown/02_markdown_script.qmd 코드\n\n글자^첨자^\n\n글자~첨자~\n\n글자^윗\\ 첨자^\n\n글자~아랫\\ 첨자~\n\n\n\n\n\n\nsample/c02/markdown/02_markdown_script.qmd 결과\n\n\n글자첨자\n글자첨자\n글자윗 첨자\n글자아랫 첨자",
+    "crumbs": [
+      "마크다운 기본"
+    ]
+  },
+  {
+    "objectID": "02.01.markdown.html#줄",
+    "href": "02.01.markdown.html#줄",
+    "title": "마크다운 기본",
+    "section": "줄",
+    "text": "줄\n글자에 아래에 밑줄을 표시하려면 해당 부분을 대괄호 기호([, ])로 감싸고 바로 뒤에 {.underline}라는 스타일 표시를 추가한다. 형광펜(하이라이트) 효과를 위해서는 해당 부분을 대괄호 기호([, ])로 감싸고 바로 뒤에 {.mark}라는 스타일 표시를 추가한다. 글자의 가운데에 취소선을 표시하려면 ~~ 기호로 둘러싼다.\n\n\n\n\n\nsample/c02/markdown/02_markdown_line.qmd 코드\n\n일부 [단어]{.underline}에 밑줄을 치거나 [강조 표시]{.mark}\n\n~~취소 기호~~\n\n\n\n\n\n\nsample/c02/markdown/02_markdown_line.qmd 결과\n\n\n일부 단어에 밑줄을 치거나 강조 표시\n취소 기호",
+    "crumbs": [
+      "마크다운 기본"
+    ]
+  },
+  {
+    "objectID": "02.01.markdown.html#그대로-표시",
+    "href": "02.01.markdown.html#그대로-표시",
+    "title": "마크다운 기본",
+    "section": "그대로 표시",
+    "text": "그대로 표시\n기호나 소스 코드의 변수명 등을 그대로 표시하려면 백틱(backtick) 기호(`)를 사용한다.\n\n\n\n\n\nsample/c02/markdown/02_markdown_verbatim.qmd 코드\n\n`*단어*의 **중간**에 ***기호***`\n\n`variable_name_01`\n\n\n\n\n\n\nsample/c02/markdown/02_markdown_verbatim.qmd 결과\n\n\n*단어*의 **중간**에 ***기호***\nvariable_name_01",
+    "crumbs": [
+      "마크다운 기본"
+    ]
+  },
+  {
+    "objectID": "02.01.markdown.html#수식",
+    "href": "02.01.markdown.html#수식",
+    "title": "마크다운 기본",
+    "section": "수식",
+    "text": "수식\n인라인(inline) 수식은 \\(\\alpha = 2^{\\beta}\\)와 같이 $ 기호 사이에 레이텍(LaTeX) 수식을 넣으면 된다. 디스플레이(display) 수식은 $$ 기호를 사용한다.\n\n\n\n\n\nsample/c02/markdown/02_markdown_equation.qmd 코드\n\n인라인(inline) 수식은 $\\alpha = 2^{\\beta}$와 같이 `$` 기호 사이에 레이텍(LaTeX) 수식을 넣으면 된다.\n\n디스플레이(display) 수식은 `$$` 기호를 사용한다.\n\n$$\n\\alpha = 2^{\\beta}\n$$\n\n\n\n\n\n\nsample/c02/markdown/02_markdown_equation.qmd 결과\n\n\n인라인(inline) 수식은 \\(\\alpha = 2^{\\beta}\\)와 같이 $ 기호 사이에 레이텍(LaTeX) 수식을 넣으면 된다.\n디스플레이(display) 수식은 $$ 기호를 사용한다.\n\\[\n\\alpha = 2^{\\beta}\n\\]",
+    "crumbs": [
+      "마크다운 기본"
+    ]
+  },
+  {
+    "objectID": "02.01.markdown.html#하이퍼링크",
+    "href": "02.01.markdown.html#하이퍼링크",
+    "title": "마크다운 기본",
+    "section": "하이퍼링크",
+    "text": "하이퍼링크\n단순한 하이퍼링크(hyperlink)는 인터넷주소(URL)을 &lt; 기호와 &gt; 기호로 둘러싼다. 실제 링크 주소와 표기가 다른 경우에는 [표기](실제 링크 주소) 형식을 사용한다. 링크 뒤에 {}를 덧붙여서 target 등의 추가적인 속성을 넣을 수 있다.\n\n\n\n\n\nsample/c02/markdown/02_markdown_link.qmd 코드\n\n기본 하이퍼링크: &lt;https://quarto.org&gt;\n\n링크와 표기가 다른 하이퍼링크: [Quarto](https://quarto.org)\n\n링크 사이트가 새 탭에서 열리는 하이퍼링크: [Quarto](https://quarto.org){target=\"_blank\" style=\"color: red;\"}\n\n\n\n\n\n\nsample/c02/markdown/02_markdown_link.qmd 결과\n\n\n기본 하이퍼링크: https://quarto.org\n링크와 표기가 다른 하이퍼링크: Quarto\n링크 사이트가 새 탭에서 열리는 하이퍼링크: Quarto",
+    "crumbs": [
+      "마크다운 기본"
+    ]
+  },
+  {
+    "objectID": "02.01.markdown.html#스팬",
+    "href": "02.01.markdown.html#스팬",
+    "title": "마크다운 기본",
+    "section": "스팬",
+    "text": "스팬\n하이퍼링크와 같이 본문 중에 대괄호를 사용하면 HTML 스팬(span)요소가 된다. 바로 뒤에 중괄호를 덧붙여 스팬의 속성을 지정할 수 있다. # 기호로 아이디를, . 기호로 클래스를 정의할 수도 있다.\n\n\n\n\n\nsample/c02/markdown/02_markdown_span.qmd 코드\n\n본문 중에 [대괄호]{#span1 style=\"color:red;\"}를 사용하면 HTML 스팬(span) [요소]{#span2 style=\"font-weight:bold; color:blue;\"}가 된다.\n\n\n\n\n\n\nsample/c02/markdown/02_markdown_span.qmd 결과\n\n\n본문 중에 대괄호를 사용하면 HTML 스팬(span) 요소가 된다.",
+    "crumbs": [
+      "마크다운 기본"
+    ]
+  },
+  {
+    "objectID": "02.01.markdown.html#div",
+    "href": "02.01.markdown.html#div",
+    "title": "마크다운 기본",
+    "section": "DIV",
+    "text": "DIV\n콜론 3개(:::) 이상을 사용하면 HTML DIV 요소를 정의할 수 있다. 앞부분 콜론 뒤에 중괄호를 사용하여 DIV 요소의 속성을 정의할 수 있고 스팬 요소와 마찬가지로 # 기호로 아이디를, . 기호로 클래스를 정의할 수 있다.\n\n\n\n\n\nsample/c02/markdown/02_markdown_div1.qmd 코드\n\n콜론 3개(`:::`)를 사용하면 HTML DIV 요소를 정의할 수 있다.\n\n\n::: {.border style=\"background-color:orange; padding:1em;\"}\n여기가 DIV 요소의 내용이다.\n:::\n\n\n앞부분 콜론 뒤에 중괄호를 사용하여 DIV 요소의 속성을 정의할 수 있다.\n\n\n\n\n\n\nsample/c02/markdown/02_markdown_div1.qmd 결과\n\n\n콜론 3개(:::)를 사용하면 HTML DIV 요소를 정의할 수 있다.\n\n여기가 DIV 요소의 내용이다.\n\n앞부분 콜론 뒤에 중괄호를 사용하여 DIV 요소의 속성을 정의할 수 있다.\n\n\n\n\nDIV는 중첩하여 사용할 수 있으며 이 경우 콜론의 개수로 특정 DIV의 시작과 끝을 정의한다.\n\n\n\n\n\nsample/c02/markdown/02_markdown_div2.qmd 코드\n\n:::: {style=\"background-color:orange; padding:1em;\"}\n바깥쪽 DIV 내용입니다.\n\n::::: {style=\"background-color:red\"}\n안쪽 DIV 내용입니다.\n:::::\n\n::::\n\n\n\n\n\n\nsample/c02/markdown/02_markdown_div2.qmd 결과\n\n\n\n바깥쪽 DIV 내용입니다.\n\n안쪽 DIV 내용입니다.",
+    "crumbs": [
+      "마크다운 기본"
+    ]
+  },
+  {
+    "objectID": "02.01.markdown.html#제목",
+    "href": "02.01.markdown.html#제목",
+    "title": "마크다운 기본",
+    "section": "제목",
+    "text": "제목\n첫줄에 # 기호를 쓰면 제목이 된다. # 기호가 1개 인 경우 1 단계 제목이 되고 # 기호가 증가할수록 단계가 올라간다.\n\n\n\n\n\nsample/c02/markdown/02_markdown_heading.qmd 코드\n\n# 1 단계 제목\n\n## 2 단계 제목\n\n### 3 단계 제목\n\n#### 4 단계 제목\n\n##### 5 단계 제목\n\n###### 6 단계 제목\n\n\n\n\n\n\nsample/c02/markdown/02_markdown_heading.qmd 결과\n\n\n1 단계 제목\n\n2 단계 제목\n\n3 단계 제목\n\n4 단계 제목\n\n5 단계 제목\n\n6 단계 제목",
+    "crumbs": [
+      "마크다운 기본"
+    ]
+  },
+  {
+    "objectID": "02.01.markdown.html#단계-제목-1",
+    "href": "02.01.markdown.html#단계-제목-1",
+    "title": "마크다운 기본",
+    "section": "2 단계 제목",
+    "text": "2 단계 제목\n\n3 단계 제목\n\n4 단계 제목\n\n5 단계 제목\n\n6 단계 제목",
+    "crumbs": [
+      "마크다운 기본"
+    ]
+  },
+  {
+    "objectID": "02.01.markdown.html#번호-없는-목록",
+    "href": "02.01.markdown.html#번호-없는-목록",
+    "title": "마크다운 기본",
+    "section": "번호 없는 목록",
+    "text": "번호 없는 목록\n번호 없는 목록을 표시할 때는 -, +, * 기호를 사용한다. 두 칸 이상 들여쓰기를 하면 목록 수준을 바꾼다. 세가지 기호 중 아무것이나 섞어서 사용해도 되지만 같은 수준의 이웃 목록 기호는 같은 것을 사용해야 한다.\n\n\n\n\n\nsample/c02/markdown/02_markdown_list1.qmd 코드\n\n- 1 단계\n  - 2 단계\n  - 2 단계\n\n* 1 단계\n  - 2 단계\n    * 3 단계\n  - 2 단계\n    + 3 단계\n    + 3 단계\n\n\n\n\n\n\nsample/c02/markdown/02_markdown_list1.qmd 결과\n\n\n\n1 단계\n\n2 단계\n2 단계\n\n1 단계\n\n2 단계\n\n3 단계\n\n2 단계\n\n3 단계\n3 단계",
+    "crumbs": [
+      "마크다운 기본"
+    ]
+  },
+  {
+    "objectID": "02.01.markdown.html#번호-있는-목록",
+    "href": "02.01.markdown.html#번호-있는-목록",
+    "title": "마크다운 기본",
+    "section": "번호 있는 목록",
+    "text": "번호 있는 목록\n번호 있는 목록을 표시할 때는 숫자 또는 # 기호의 뒤에 마침표(.) 또는 닫는 소괄호())를 붙이거나 앞뒤로 소괄호를 붙인다. 실제 목록의 숫자는 코드의 숫자와 아무런 관계없이 순서대로 매겨진다.\n번호를 다시 시작하려면 사이에 하나의 문단이 있어야 한다.\n\n\n\n\n\nsample/c02/markdown/02_markdown_list2.qmd 코드\n\n1. 하나\n2. 둘\n1. 하나\n3. 셋\n#. 하나\n#. 둘\n\n1) 하나\n1) 둘\n   (1) 하나\n   (1) 둘\n\n\n(#) 하나\n(#) 둘\n\n문단\n\n(#) 새 항목\n(#) 새 항목\n\n\n\n\n\n\nsample/c02/markdown/02_markdown_list2.qmd 결과\n\n\n\n하나\n둘\n하나\n셋\n하나\n둘\n\n\n하나\n둘\n\n하나\n둘\n\n\n\n하나\n둘\n\n문단\n\n새 항목\n새 항목",
+    "crumbs": [
+      "마크다운 기본"
+    ]
+  },
+  {
+    "objectID": "02.01.markdown.html#각주",
+    "href": "02.01.markdown.html#각주",
+    "title": "마크다운 기본",
+    "section": "각주",
+    "text": "각주\n문장에 있는 각주(footnote)는 [^주석숫자]의 형태로 사용한다. 문장내에서는 각주 표시만 하고 나중에 다음과 같이 각주의 내용을 덧붙이면 페이지 하단에 각주가 생성된다. 주석숫자는 주석에 대한 이름 역할만 할 뿐이며 실제 주석에 표시되는 숫자는 주석숫자와 상관없이 순서대로 매겨진다.\n\n\n\n\n\nsample/c02/markdown/02_markdown_note.qmd 코드\n\n\n문장에 있는 각주[^1]는 `[^주석숫자]`의 형태로 사용한다.\n\n[^1]: 문장내에서는 각주 표시만 하고 나중에 다음과 같이 각주의 내용을 덧붙이면 페이지 하단에 각주가 생성된다.\n\n주석숫자[^3]는 표시한 숫자와 상관없이 순서대로 번호가 매겨진다.\n\n[^3]: 각주의 내용을 어디에 넣더라도 페이지 하단에 표시한다.\n\n\n\n\n\n\nsample/c02/markdown/02_markdown_note.qmd 결과\n\n\n문장에 있는 각주1는 [^주석숫자]의 형태로 사용한다.\n주석숫자2는 표시한 숫자와 상관없이 순서대로 번호가 매겨진다.",
+    "crumbs": [
+      "마크다운 기본"
+    ]
+  },
+  {
+    "objectID": "02.01.markdown.html#footnotes",
+    "href": "02.01.markdown.html#footnotes",
+    "title": "마크다운 기본",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\n문장내에서는 각주 표시만 하고 나중에 다음과 같이 각주의 내용을 덧붙이면 페이지 하단에 각주가 생성된다.↩︎\n각주의 내용을 어디에 넣더라도 페이지 하단에 표시한다.↩︎",
+    "crumbs": [
+      "마크다운 기본"
+    ]
+  },
+  {
+    "objectID": "02.03.block.html",
+    "href": "02.03.block.html",
+    "title": "블럭",
+    "section": "",
+    "text": "인용 블럭(quote block)\n\n\n\n\n\nsample/c02/block/02_block_quote.qmd 코드\n\n&gt; 로렘 입숨(lorem ipsum; 줄여서 립숨, lipsum)은 출판이나 그래픽 디자인 분야에서 폰트, 타이포그래피, 레이아웃 같은 그래픽 요소나 시각적 연출을 보여줄 때 사용하는 표준 채우기 텍스트로, 최종 결과물에 들어가는 실제적인 문장 내용이 채워지기 전에 시각 디자인 프로젝트 모형의 채움 글로도 이용된다. 이런 용도로 사용할 때 로렘 입숨을 그리킹(greeking)이라고도 부르며, 때로 로렘 입숨은 공간만 차지하는 무언가를 지칭하는 용어로도 사용된다.\n\n\n\n&gt; 로렘 입숨(lorem ipsum; 줄여서 립숨, lipsum)은\n&gt;    출판이나 그래픽 디자인 분야에서 폰트, 타이포그래피, 레이아웃 같은\n&gt;         그래픽 요소나 시각적 연출을 보여줄 때 사용하는 표준 채우기 텍스트로,\n&gt;     최종 결과물에 들어가는 실제적인 문장 내용이 채워지기 전에\n&gt; 시각 디자인 프로젝트 모형의 채움 글로도 이용된다.\n&gt;   이런 용도로 사용할 때 로렘 입숨을 그리킹(greeking)이라고도 부르며,\n&gt;  때로 로렘 입숨은 공간만 차지하는 무언가를 지칭하는 용어로도 사용된다.\n\n\n\n\n\n\nsample/c02/block/02_block_quote.qmd 결과\n\n\n\n로렘 입숨(lorem ipsum; 줄여서 립숨, lipsum)은 출판이나 그래픽 디자인 분야에서 폰트, 타이포그래피, 레이아웃 같은 그래픽 요소나 시각적 연출을 보여줄 때 사용하는 표준 채우기 텍스트로, 최종 결과물에 들어가는 실제적인 문장 내용이 채워지기 전에 시각 디자인 프로젝트 모형의 채움 글로도 이용된다. 이런 용도로 사용할 때 로렘 입숨을 그리킹(greeking)이라고도 부르며, 때로 로렘 입숨은 공간만 차지하는 무언가를 지칭하는 용어로도 사용된다.\n\n\n로렘 입숨(lorem ipsum; 줄여서 립숨, lipsum)은 출판이나 그래픽 디자인 분야에서 폰트, 타이포그래피, 레이아웃 같은 그래픽 요소나 시각적 연출을 보여줄 때 사용하는 표준 채우기 텍스트로, 최종 결과물에 들어가는 실제적인 문장 내용이 채워지기 전에 시각 디자인 프로젝트 모형의 채움 글로도 이용된다. 이런 용도로 사용할 때 로렘 입숨을 그리킹(greeking)이라고도 부르며, 때로 로렘 입숨은 공간만 차지하는 무언가를 지칭하는 용어로도 사용된다.",
+    "crumbs": [
+      "블럭"
+    ]
+  },
+  {
+    "objectID": "02.03.block.html#인용-블럭",
+    "href": "02.03.block.html#인용-블럭",
+    "title": "블럭",
+    "section": "",
+    "text": "인용 블럭(quote block)\n\n\n\n\n\nsample/c02/block/02_block_quote.qmd 코드\n\n&gt; 로렘 입숨(lorem ipsum; 줄여서 립숨, lipsum)은 출판이나 그래픽 디자인 분야에서 폰트, 타이포그래피, 레이아웃 같은 그래픽 요소나 시각적 연출을 보여줄 때 사용하는 표준 채우기 텍스트로, 최종 결과물에 들어가는 실제적인 문장 내용이 채워지기 전에 시각 디자인 프로젝트 모형의 채움 글로도 이용된다. 이런 용도로 사용할 때 로렘 입숨을 그리킹(greeking)이라고도 부르며, 때로 로렘 입숨은 공간만 차지하는 무언가를 지칭하는 용어로도 사용된다.\n\n\n\n&gt; 로렘 입숨(lorem ipsum; 줄여서 립숨, lipsum)은\n&gt;    출판이나 그래픽 디자인 분야에서 폰트, 타이포그래피, 레이아웃 같은\n&gt;         그래픽 요소나 시각적 연출을 보여줄 때 사용하는 표준 채우기 텍스트로,\n&gt;     최종 결과물에 들어가는 실제적인 문장 내용이 채워지기 전에\n&gt; 시각 디자인 프로젝트 모형의 채움 글로도 이용된다.\n&gt;   이런 용도로 사용할 때 로렘 입숨을 그리킹(greeking)이라고도 부르며,\n&gt;  때로 로렘 입숨은 공간만 차지하는 무언가를 지칭하는 용어로도 사용된다.\n\n\n\n\n\n\nsample/c02/block/02_block_quote.qmd 결과\n\n\n\n로렘 입숨(lorem ipsum; 줄여서 립숨, lipsum)은 출판이나 그래픽 디자인 분야에서 폰트, 타이포그래피, 레이아웃 같은 그래픽 요소나 시각적 연출을 보여줄 때 사용하는 표준 채우기 텍스트로, 최종 결과물에 들어가는 실제적인 문장 내용이 채워지기 전에 시각 디자인 프로젝트 모형의 채움 글로도 이용된다. 이런 용도로 사용할 때 로렘 입숨을 그리킹(greeking)이라고도 부르며, 때로 로렘 입숨은 공간만 차지하는 무언가를 지칭하는 용어로도 사용된다.\n\n\n로렘 입숨(lorem ipsum; 줄여서 립숨, lipsum)은 출판이나 그래픽 디자인 분야에서 폰트, 타이포그래피, 레이아웃 같은 그래픽 요소나 시각적 연출을 보여줄 때 사용하는 표준 채우기 텍스트로, 최종 결과물에 들어가는 실제적인 문장 내용이 채워지기 전에 시각 디자인 프로젝트 모형의 채움 글로도 이용된다. 이런 용도로 사용할 때 로렘 입숨을 그리킹(greeking)이라고도 부르며, 때로 로렘 입숨은 공간만 차지하는 무언가를 지칭하는 용어로도 사용된다.",
+    "crumbs": [
+      "블럭"
+    ]
+  },
+  {
+    "objectID": "02.03.block.html#라인-블럭",
+    "href": "02.03.block.html#라인-블럭",
+    "title": "블럭",
+    "section": "라인 블럭",
+    "text": "라인 블럭\n\n\n\n\n\nsample/c02/block/02_block_line.qmd 코드\n\n| 로렘 입숨(lorem ipsum; 줄여서 립숨, lipsum)은 출판이나 그래픽 디자인 분야에서 폰트, 타이포그래피, 레이아웃 같은 그래픽 요소나 시각적 연출을 보여줄 때 사용하는 표준 채우기 텍스트로, 최종 결과물에 들어가는 실제적인 문장 내용이 채워지기 전에 시각 디자인 프로젝트 모형의 채움 글로도 이용된다. 이런 용도로 사용할 때 로렘 입숨을 그리킹(greeking)이라고도 부르며, 때로 로렘 입숨은 공간만 차지하는 무언가를 지칭하는 용어로도 사용된다.\n\n\n\n| 로렘 입숨(lorem ipsum; 줄여서 립숨, lipsum)은\n|    출판이나 그래픽 디자인 분야에서 폰트, 타이포그래피, 레이아웃 같은\n|         그래픽 요소나 시각적 연출을 보여줄 때 사용하는 표준 채우기 텍스트로,\n|     최종 결과물에 들어가는 실제적인 문장 내용이 채워지기 전에\n| 시각 디자인 프로젝트 모형의 채움 글로도 이용된다.\n|   이런 용도로 사용할 때 로렘 입숨을 그리킹(greeking)이라고도 부르며,\n|  때로 로렘 입숨은 공간만 차지하는 무언가를 지칭하는 용어로도 사용된다.\n\n\n\n\n\n\nsample/c02/block/02_block_line.qmd 결과\n\n\n로렘 입숨(lorem ipsum; 줄여서 립숨, lipsum)은 출판이나 그래픽 디자인 분야에서 폰트, 타이포그래피, 레이아웃 같은 그래픽 요소나 시각적 연출을 보여줄 때 사용하는 표준 채우기 텍스트로, 최종 결과물에 들어가는 실제적인 문장 내용이 채워지기 전에 시각 디자인 프로젝트 모형의 채움 글로도 이용된다. 이런 용도로 사용할 때 로렘 입숨을 그리킹(greeking)이라고도 부르며, 때로 로렘 입숨은 공간만 차지하는 무언가를 지칭하는 용어로도 사용된다.\n로렘 입숨(lorem ipsum; 줄여서 립숨, lipsum)은\n   출판이나 그래픽 디자인 분야에서 폰트, 타이포그래피, 레이아웃 같은\n        그래픽 요소나 시각적 연출을 보여줄 때 사용하는 표준 채우기 텍스트로,\n    최종 결과물에 들어가는 실제적인 문장 내용이 채워지기 전에\n시각 디자인 프로젝트 모형의 채움 글로도 이용된다.\n  이런 용도로 사용할 때 로렘 입숨을 그리킹(greeking)이라고도 부르며,\n 때로 로렘 입숨은 공간만 차지하는 무언가를 지칭하는 용어로도 사용된다.",
+    "crumbs": [
+      "블럭"
+    ]
+  },
+  {
+    "objectID": "02.03.block.html#콜아웃-블럭",
+    "href": "02.03.block.html#콜아웃-블럭",
+    "title": "블럭",
+    "section": "콜아웃 블럭",
+    "text": "콜아웃 블럭\nHTML DIV 요소에 callout-note와 같이 콜아웃 블럭(callout-block) 클래스 지정을 하면 내용 강조를 위한 박스 형태를 만들 수 있다. 콰르토에서 지원하는 콜아웃 블럭 클래스는 다음 5가지 종류다.\n\ncallout-note\ncallout-warning\ncallout-important\ncallout-tip\ncallout-caution\n\n\n\n\n\n\nsample/c02/block/02_block_callout.qmd 코드\n\n::: {.callout-note}\nnote 콜아웃\n:::\n\n::: {.callout-warning}\nwarning 콜아웃\n:::\n\n::: {.callout-important}\nimportant 콜아웃\n:::\n\n::: {.callout-tip}\ntip 콜아웃\n:::\n\n::: {.callout-caution}\ncaution 콜아웃\n:::\n\n\n\n\n\n\nsample/c02/block/02_block_callout.qmd 결과\n\n\n\n\n\n\n\n\nNote\n\n\n\nnote 콜아웃\n\n\n\n\n\n\n\n\nWarning\n\n\n\nwarning 콜아웃\n\n\n\n\n\n\n\n\nImportant\n\n\n\nimportant 콜아웃\n\n\n\n\n\n\n\n\nTip\n\n\n\ntip 콜아웃\n\n\n\n\n\n\n\n\nCaution\n\n\n\ncaution 콜아웃",
+    "crumbs": [
+      "블럭"
+    ]
+  },
+  {
+    "objectID": "02.03.block.html#제목-변경",
+    "href": "02.03.block.html#제목-변경",
+    "title": "블럭",
+    "section": "제목 변경",
+    "text": "제목 변경\n\n\n\n\n\nsample/c02/block/02_block_title.qmd 코드\n\n::: {.callout-note title=\"콜아웃 블럭 제목\"}\n제목이 있는 콜아웃\n:::\n\n\n\n\n\n\nsample/c02/block/02_block_title.qmd 결과\n\n\n\n\n\n\n\n\nNote콜아웃 블럭 제목\n\n\n\n제목이 있는 콜아웃",
+    "crumbs": [
+      "블럭"
+    ]
+  },
+  {
+    "objectID": "02.03.block.html#아이콘-제거",
+    "href": "02.03.block.html#아이콘-제거",
+    "title": "블럭",
+    "section": "아이콘 제거",
+    "text": "아이콘 제거\n\n\n\n\n\nsample/c02/block/02_block_noicon.qmd 코드\n\n::: {.callout-note title=\"콜아웃 블럭 제목\" icon=\"false\"}\n아이콘이 없는 콜아웃\n:::\n\n\n\n\n\n\nsample/c02/block/02_block_noicon.qmd 결과\n\n\n\n\n\n\n\n\nNote콜아웃 블럭 제목\n\n\n\n아이콘이 없는 콜아웃",
+    "crumbs": [
+      "블럭"
+    ]
+  },
+  {
+    "objectID": "02.03.block.html#모양-변경",
+    "href": "02.03.block.html#모양-변경",
+    "title": "블럭",
+    "section": "모양 변경",
+    "text": "모양 변경\n\n\n\n\n\nsample/c02/block/02_block_appearance.qmd 코드\n\n::: {.callout-note appearance=\"default\"}\n디폴트 스타일 콜아웃\n:::\n\n::: {.callout-note appearance=\"simple\"}\nsimple 스타일 콜아웃\n:::\n\n::: {.callout-note appearance=\"minimal\"}\nminimal 스타일 콜아웃\n:::\n\n\n\n\n\n\nsample/c02/block/02_block_appearance.qmd 결과\n\n\n\n\n\n\n\n\nNote\n\n\n\n디폴트 스타일 콜아웃\n\n\n\n\n\n\n\n\nsimple 스타일 콜아웃\n\n\n\n\n\n\n\n\n\nminimal 스타일 콜아웃",
+    "crumbs": [
+      "블럭"
+    ]
+  },
+  {
+    "objectID": "02.03.block.html#참조",
+    "href": "02.03.block.html#참조",
+    "title": "블럭",
+    "section": "참조",
+    "text": "참조",
+    "crumbs": [
+      "블럭"
+    ]
+  }
+]
